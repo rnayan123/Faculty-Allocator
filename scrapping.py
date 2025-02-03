@@ -17,9 +17,11 @@ stop_words = set(stopwords.words("english"))
 
 # Predefined list of subjects categorized by semester
 subjects_by_semester = {
-    "Sem 1": ["Mathematical Foundation for Computer Science","Problem Solving Using C ","Research Methodology ","Computer Organization and Design","Advanced Database Technologies","Python Programming ","WebDevelopment ","React"],
-    "Sem 2": ["Java", "Operating Systems", "Database Management"],
-    "Sem 3": ["Machine Learning", "Deep Learning", "Artificial Intelligence","IOT"],
+    "Sem 1": ["Mathematical Foundation for Computer Science","Problem Solving Using C ","Research Methodology ","Computer Organization and Design"," Database ","Python Programming ","WebDevelopment "],
+    "Sem 2": ["Software Engineering","Applied Statistics using R  ","Operating System","Data Structures and Algorithms ","Java "],
+    "Sem 3": ["Data Communication and Cryptography", "Data Mining", "Mobile Application Development ","Accounting and Finance Management","Econometrics","Computational Social Science","Cognitive Psychology"],
+    "Sem 4": ["IOT ","Microservices","Cloud Computing ","Artificial Intelligence","Machine Learning","Advanced Data Analytics","Cyber Security ","Network Design and Management "],
+    "Sem 5": ["Computer Vision ","BlockChain Technology","Neural Network ","Deep Learning","Data Visualization","NLP","Quantum Computing","UI/UX Design","AR & VR","Theory of Computation","Soft Computing Techniques","Embedded Systems","Digital Forensics"],
     "All": []
 }
 
@@ -73,7 +75,8 @@ st.title("Subject Allocation & Expertise Portal")
 
 faculty_urls = st.text_area("Enter Faculty URLs (one per line):", "https://example.com/faculty1\nhttps://example.com/faculty2")
 
-tab_hrefs_input = st.text_area("Enter tab hrefs (one per line):", "#tab_default_4\n#tab_default_601")
+tab_hrefs_input = st.text_area("Enter tab hrefs (one per line):", "#tab_default_4\n#tab_default_601\n#tab_default_9\n#tab_default_3\n#tab_default_15\n#tab_default_17\n#tab_default_18\n#tab_default_12")
+
 
 # Dropdown for semester selection
 selected_semester = st.selectbox("Select Semester", list(subjects_by_semester.keys()))
